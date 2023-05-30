@@ -1,20 +1,15 @@
 from setuptools import setup
 
 setup(
-    name="caption-app",
-    version="0.1",
-    packages=[""],
+    name='question_answering_demo',
+    version='1.0',
+    description='Question Answering Demo using Streamlit and Transformers',
+    author='Your Name',
+    author_email='your_email@example.com',
+    packages=[''],
     install_requires=[
-        "streamlit==1.19.0",
-        "torch==1.9.0",
-        "torchvision==0.10.0",
-        "transformers==4.11.3",
-        "pillow==8.4.0",
-        "vit-pytorch==0.18.0"
+        'streamlit',
+        'torch==1.9.0',
+        'transformers==4.10.2'
     ],
-    entry_points={
-        "console_scripts": [
-            "caption-app = app:main"
-        ]
-    },
 )
