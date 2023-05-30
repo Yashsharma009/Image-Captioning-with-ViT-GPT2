@@ -5,7 +5,7 @@ setup(
     version="0.1",
     packages=[""],
     install_requires=[
-        "streamlit==0.91.2",
+        "streamlit==1.19.0",
         "torch==1.9.0",
         "torchvision==0.10.0",
         "transformers==4.11.3",
