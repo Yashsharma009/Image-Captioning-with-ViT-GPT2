@@ -1,12 +1,12 @@
 import torch
 from PIL import Image
 import streamlit as st
-from transformers import VisionEncoderDecoderModel, ViTImageProcessor, AutoTokenizer
+from transformers import ViTFeatureExtractor, ViTForImageCaptioning, AutoTokenizer
 
 model_name = "nlpconnect/vit-gpt2-image-captioning"
-model = VisionEncoderDecoderModel.from_pretrained(model_name)
-feature_extractor = ViTImageProcessor.from_pretrained(model_name)
+feature_extractor = ViTFeatureExtractor.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = ViTForImageCaptioning.from_pretrained(model_name)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
@@ -14,6 +14,7 @@ model.to(device)
 max_length = 16
 num_beams = 4
 gen_kwargs = {"max_length": max_length, "num_beams": num_beams}
+
 
 def predict_step(image_paths):
     images = []
@@ -32,6 +33,7 @@ def predict_step(image_paths):
     preds = [pred.strip() for pred in preds]
     return preds
 
+
 def main():
     st.title("Image Captioning with ViT-GPT2")
     st.write("Upload an image and get a caption!")
@@ -49,6 +51,7 @@ def main():
         st.subheader("Predicted Caption:")
         for pred in preds:
             st.write(pred)
+
 
 if __name__ == "__main__":
     main()
