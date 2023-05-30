@@ -1,19 +1,20 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
-    name='image_captioning_app',
-    version='1.0',
-    packages=find_packages(),
-    include_package_data=True,
+    name="caption-app",
+    version="0.1",
+    packages=[""],
     install_requires=[
-        'torch==1.9.0',
-        'transformers==4.10.2',
-        'streamlit==1.2.0',
-        'Pillow==8.3.2',
+        "streamlit==0.91.2",
+        "torch==1.9.0",
+        "torchvision==0.10.0",
+        "transformers==4.11.3",
+        "pillow==8.4.0",
+        "vit-pytorch==0.18.0"
     ],
     entry_points={
-        'console_scripts': [
-            'image_captioning_app = app:main',
-        ],
+        "console_scripts": [
+            "caption-app = app:main"
+        ]
     },
 )
