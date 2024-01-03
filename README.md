@@ -42,9 +42,4 @@ streamlit run app.py
 - Transformers library by Hugging Face
 ...
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-Copy and paste this content into a file named `README.txt` in the root of your project directory.
