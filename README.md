@@ -30,8 +30,10 @@ streamlit run app.py
 
 ## Example
 
-![Example Image 1](images/example1.jpg)
-![Example Image 2](images/example2.jpg)
+<img width="788" alt="image" src="https://github.com/Yashsharma009/caption/assets/116294789/e557bb5d-9333-41c9-a3d7-c1ba6534a9ec">
+
+<img width="780" alt="image" src="https://github.com/Yashsharma009/caption/assets/116294789/d35f045c-44fd-421b-8b88-7e68082b3386">
+
 
 ...
 
